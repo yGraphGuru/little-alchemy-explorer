@@ -5,10 +5,6 @@ from yfiles_graphs_for_streamlit import StreamlitGraphWidget, Layout, NodeStyle,
 
 st.set_page_config(page_title="yFiles Graphs for Streamlit", layout="wide")
 
-st.header("Explore Little Alchemy with yFiles Graphs for Streamlit")
-st.text("This component allows you to display and interact with graph data directly within your Streamlit apps. Its interactive viewer and API provide many useful features, such as data-driven item visualization, automatic graph algorithms, heatmaps, geospatial data mapping and many more.", width=800)
-st.markdown("Find more at [GitHub - yFiles Graphs for Streamlit](https://github.com/yWorks/yfiles-graphs-for-streamlit).")
-
 # load little-alchemy data from the web
 @st.cache_data
 def load_data():
@@ -105,5 +101,5 @@ graph = StreamlitGraphWidget(
 )
 
 with col2:
-    # render the component with a hierarchic layout and collapsed overview overlay
-    graph.show(graph_layout=Layout.HIERARCHIC, overview=False, key="graph-component")
+    # render the component with a hierarchical layout and collapsed overview overlay
+    graph.show(graph_layout=Layout.HIERARCHICAL, overview=False, key="graph-component")
